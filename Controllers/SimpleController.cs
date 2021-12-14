@@ -14,12 +14,12 @@ namespace DockerExample.Controllers
             _logger = logger;
         }
 
-        [HttpGet("{visitor}")]
-        public string Get(string visitor)
+        [HttpGet]
+        public string Get()
         {
             var visitorCountLocal = Interlocked.Increment(ref visitorCount);
-            _logger.LogError(message: $"visitor : {visitor} count : {visitorCount}");
-            return $"안녕하세요 {visitor} 님! 당신은 이곳에 방문한 {visitorCountLocal}번째 손님입니다!";
+            _logger.LogError(message: $"count : {visitorCount}");
+            return $"Hello! Today's visitor : {visitorCountLocal}";
         }
     }
 }
