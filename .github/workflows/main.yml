@@ -2,7 +2,7 @@ name: frism-development-ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths-ignore:
       - 'README.md'
       - '.dockerignore'
